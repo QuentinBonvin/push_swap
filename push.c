@@ -6,7 +6,7 @@
 /*   By: qbonvin <qbonvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 16:12:10 by qbonvin           #+#    #+#             */
-/*   Updated: 2022/06/06 16:11:55 by qbonvin          ###   ########.fr       */
+/*   Updated: 2022/06/07 15:39:28 by qbonvin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	pa(t_stack *stack)
 {
-	size_t	i;
+	int	i;
 
 	i = stack->size_a + 1;
 	if (stack->size_b == 0)
@@ -37,7 +37,7 @@ void	pa(t_stack *stack)
 
 void	pb(t_stack *stack)
 {
-	size_t	i;
+	int	i;
 
 	i = stack->size_b + 1;
 	if (stack->size_a == 0)

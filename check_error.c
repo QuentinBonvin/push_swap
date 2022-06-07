@@ -6,7 +6,7 @@
 /*   By: qbonvin <qbonvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 16:02:39 by qbonvin           #+#    #+#             */
-/*   Updated: 2022/06/07 13:13:03 by qbonvin          ###   ########.fr       */
+/*   Updated: 2022/06/07 16:33:36 by qbonvin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void	check_dup_number(t_stack *stack)
 
 int	is_order(t_stack *stack)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (i < stack->size_a - 1)

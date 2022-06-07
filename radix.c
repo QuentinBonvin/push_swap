@@ -6,7 +6,7 @@
 /*   By: qbonvin <qbonvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 11:27:44 by qbonvin           #+#    #+#             */
-/*   Updated: 2022/06/07 11:52:13 by qbonvin          ###   ########.fr       */
+/*   Updated: 2022/06/07 15:40:09 by qbonvin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	check_sort_stack_a(t_stack *stack)
 {
-	unsigned int	i;
-	int	j;
+	int				i;
+	int				j;
 
 	i = 0;
 	while (i < stack->size_a - 1)
@@ -52,7 +52,6 @@ int	radix_sort(t_stack *stack)
 
 	i = -1;
 	max = nbr_bit(stack);
-    printf("testt =%d\n", max);
 	while (++i < max && (!(is_order(stack))))
 	{
 		j = stack->size_a;

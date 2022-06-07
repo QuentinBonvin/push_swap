@@ -6,7 +6,7 @@
 /*   By: qbonvin <qbonvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 15:59:57 by qbonvin           #+#    #+#             */
-/*   Updated: 2022/06/06 16:11:57 by qbonvin          ###   ########.fr       */
+/*   Updated: 2022/06/07 14:09:57 by qbonvin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	sa(t_stack *stack)
 {
 	int	tmp;
+
 	if (stack->stack_a == 0)
 		exit (0);
 	tmp = stack->stack_a[0];

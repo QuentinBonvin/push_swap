@@ -6,7 +6,7 @@
 /*   By: qbonvin <qbonvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 16:25:49 by qbonvin           #+#    #+#             */
-/*   Updated: 2022/06/06 16:11:54 by qbonvin          ###   ########.fr       */
+/*   Updated: 2022/06/07 14:09:06 by qbonvin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	rra(t_stack *stack)
 	stack->stack_a[0] = temp;
 	ft_printf("rra\n");
 }
-/*
+
 void	rrb(t_stack *stack)
 {
 	int	i;
@@ -42,7 +42,7 @@ void	rrb(t_stack *stack)
 	stack->stack_b[0] = temp;
 	ft_printf("rra\n");
 }
-*/
+
 void	rrr(t_stack *stack)
 {
 	(void)stack;

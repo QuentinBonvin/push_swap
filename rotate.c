@@ -6,7 +6,7 @@
 /*   By: qbonvin <qbonvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 16:14:14 by qbonvin           #+#    #+#             */
-/*   Updated: 2022/06/06 16:12:13 by qbonvin          ###   ########.fr       */
+/*   Updated: 2022/06/07 15:39:46 by qbonvin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ra(t_stack *stack)
 {
-	size_t	i;
+	int	i;
 	int		temp;
 
 	if (1 < stack->size_a)
@@ -30,10 +30,10 @@ void	ra(t_stack *stack)
 		ft_printf("ra\n");
 	}
 }
-/*
+
 void	rb(t_stack *stack)
 {
-	size_t	i;
+	int	i;
 	int		temp;
 
 	if (1 < stack->size_b)
@@ -49,9 +49,9 @@ void	rb(t_stack *stack)
 		ft_printf("rb\n");
 	}
 }
-*/
+
 void	rr(t_stack *stack)
 {
 	ra(stack);
-	//rb(stack);
+	rb(stack);
 }
