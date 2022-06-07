@@ -6,7 +6,7 @@
 /*   By: qbonvin <qbonvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:48:32 by qbonvin           #+#    #+#             */
-/*   Updated: 2022/06/07 11:31:54 by qbonvin          ###   ########.fr       */
+/*   Updated: 2022/06/07 14:00:52 by qbonvin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ typedef struct s_stack
 	size_t		size_b;
 	int			*stack_a;
 	int			*stack_b;
+	int			*temp_board;
+	int			*stack_a_temp;
 }	t_stack;
 
 /*****************************
@@ -49,6 +51,8 @@ void		solve(t_stack *stack);
  ****************************/
 void		init_stack(int argc, char **argv, t_stack *stack);
 void		insert_to_stack_a(int argc, char **argv, t_stack *stack);
+void		bigger_than_2_argv(int argc, char **argv, t_stack *stack);
+void		egal_2_argv(int argc, char **argv, t_stack *stack);
 
 /*****************************
  * Function
