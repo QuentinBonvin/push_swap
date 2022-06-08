@@ -6,7 +6,7 @@
 /*   By: qbonvin <qbonvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 16:02:39 by qbonvin           #+#    #+#             */
-/*   Updated: 2022/06/07 16:33:36 by qbonvin          ###   ########.fr       */
+/*   Updated: 2022/06/08 13:21:43 by qbonvin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,14 @@ int	check_if_int(int argc, char **argv)
 		args[j] = ft_atol(argv[i]);
 		if (args[j] < INT_MIN || args[j] > INT_MAX)
 		{
-			ft_printf("error\nnot a integer\n");
+			//ft_printf("error\nnot a integer\n");
+			free(args);
 			exit (0);
 		}
 		j++;
 		i++;
 	}
+	free(args);
 	return (0);
 }
 
@@ -66,7 +68,8 @@ int	argv_is_digit(char **argv)
 			if (argv[i][j] == '-')
 				j++;
 			if (argv[i][j] < 48 || argv[i][j] > 57)
-				error("error\nnot a digit number\n");
+				//error("error\nnot a digit number\n");
+				exit (0);
 			j++;
 		}
 		j = 0;
@@ -86,7 +89,8 @@ void	check_dup_number(t_stack *stack)
 		j = -1;
 		while (stack->stack_a[++j])
 			if (j != i && stack->stack_a[i] == stack->stack_a[j])
-				error("There are duplicate numbers\n");
+				//error("There are duplicate numbers\n");
+				exit (0);
 	}
 }
 
@@ -102,6 +106,6 @@ int	is_order(t_stack *stack)
 		else
 			return (0);
 	}
-	error("number order\n");
-	exit (0);
+	//ft_printf("number order\n");
+	return (1);
 }

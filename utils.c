@@ -6,7 +6,7 @@
 /*   By: qbonvin <qbonvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 12:06:08 by qbonvin           #+#    #+#             */
-/*   Updated: 2022/06/07 16:33:03 by qbonvin          ###   ########.fr       */
+/*   Updated: 2022/06/08 11:51:12 by qbonvin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	display_stack(t_stack *stack)
 	}
 }
 
-/*void	display_stack_b(t_stack *stack)
+void	display_stack_b(t_stack *stack)
 {
 	int	i;
 
@@ -69,13 +69,16 @@ void	display_stack(t_stack *stack)
 		printf("[%d] = %d\n", i, stack->temp_board[i]);
 		i++;
 	}
-}*/
+}
 
 void	free_all(t_stack *stack)
 {
+	stack->stack_a = NULL;
 	free(stack->stack_a);
-	free(stack->stack_a);
+	stack->stack_b = NULL;
+	free(stack->stack_b);
+	stack->stack_a_temp = NULL;
 	free(stack->stack_a_temp);
+	stack->temp_board = NULL;
 	free(stack->temp_board);
-	free(argumen)
 }

@@ -6,7 +6,7 @@
 /*   By: qbonvin <qbonvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 16:14:14 by qbonvin           #+#    #+#             */
-/*   Updated: 2022/06/07 15:39:46 by qbonvin          ###   ########.fr       */
+/*   Updated: 2022/06/08 11:50:58 by qbonvin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ra(t_stack *stack)
 {
 	int	i;
-	int		temp;
+	int	temp;
 
 	if (1 < stack->size_a)
 	{
@@ -34,7 +34,7 @@ void	ra(t_stack *stack)
 void	rb(t_stack *stack)
 {
 	int	i;
-	int		temp;
+	int	temp;
 
 	if (1 < stack->size_b)
 	{

@@ -6,7 +6,7 @@
 /*   By: qbonvin <qbonvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 14:53:30 by qbonvin           #+#    #+#             */
-/*   Updated: 2022/06/07 16:19:27 by qbonvin          ###   ########.fr       */
+/*   Updated: 2022/06/08 13:22:10 by qbonvin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	new_sort(t_stack *stack)
 {
-    int	i;
+	int	i;
 	int	j;
 	int	tmp;
-	
+
 	i = 0;
 	while (i < stack->size_a - 1)
 	{
