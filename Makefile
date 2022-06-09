@@ -6,7 +6,7 @@
 #    By: qbonvin <qbonvin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/25 15:27:16 by qbonvin           #+#    #+#              #
-#    Updated: 2022/06/08 09:45:06 by qbonvin          ###   ########.fr        #
+#    Updated: 2022/06/09 14:04:22 by qbonvin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,8 +23,8 @@ LIBFT_A = -L ./libft -lft
 all : ${NAME}
 
 ${NAME} : ${OBJ}
-	make -C ${LIBFT}
-	@${CC} ${CFLAGS} -o ${PROG} ${OBJ} ${LIBFT_A}
+	@make -C ${LIBFT}
+	${CC} ${CFLAGS} -o ${PROG} ${OBJ} ${LIBFT_A}
 
 clean :
 	rm -rf ${OBJ}

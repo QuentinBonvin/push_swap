@@ -6,7 +6,7 @@
 /*   By: qbonvin <qbonvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 11:47:30 by qbonvin           #+#    #+#             */
-/*   Updated: 2022/06/07 16:58:42 by qbonvin          ###   ########.fr       */
+/*   Updated: 2022/06/09 13:53:19 by qbonvin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	init_stack(int argc, char **argv, t_stack *stack)
 	if (argc > 2)
 	{
 		stack->size_a = argc - 1;
-		stack->stack_a = malloc(sizeof(int) * argc - 1);
-		stack->stack_b = malloc(sizeof(int) * argc - 1);
+		stack->stack_a = malloc(sizeof(int) * (argc - 1));
+		stack->stack_b = malloc(sizeof(int) * (argc - 1));
 		stack->stack_a_temp = malloc(sizeof(int) * argc - 1);
 		stack->temp_board = malloc(sizeof(int) * argc - 1);
 	}
@@ -73,7 +73,9 @@ void	egal_2_argv(int argc, char **argv, t_stack *stack)
 	int	i;
 	int	j;
 	int	k;
+	int	l;
 
+	l = -1;
 	i = 0;
 	j = 0;
 	k = 1;
@@ -87,5 +89,8 @@ void	egal_2_argv(int argc, char **argv, t_stack *stack)
 			i++;
 			j++;
 		}
+		while (argv[++l])
+			free(argv[l]);
+		free(argv);
 	}
 }

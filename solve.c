@@ -6,7 +6,7 @@
 /*   By: qbonvin <qbonvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 14:51:18 by qbonvin           #+#    #+#             */
-/*   Updated: 2022/06/07 16:51:43 by qbonvin          ###   ########.fr       */
+/*   Updated: 2022/06/08 16:45:34 by qbonvin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	solve(t_stack *stack)
 			algo_with_3_args(stack);
 		else if (stack->size_a == 4)
 			algo_with_4_args(stack);
-		if (stack->size_a == 5)
+		else if (stack->size_a == 5)
 			algo_with_5_args(stack);
 		else
 			radix_sort(stack);

@@ -6,7 +6,7 @@
 /*   By: qbonvin <qbonvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 12:06:08 by qbonvin           #+#    #+#             */
-/*   Updated: 2022/06/08 11:51:12 by qbonvin          ###   ########.fr       */
+/*   Updated: 2022/06/08 16:19:37 by qbonvin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ long int	ft_atol(const char *str)
 	return (res * sign);
 }
 
-void	display_stack(t_stack *stack)
+/*void	display_stack(t_stack *stack)
 {
 	int	i;
 
@@ -70,15 +70,12 @@ void	display_stack_b(t_stack *stack)
 		i++;
 	}
 }
-
+*/
 void	free_all(t_stack *stack)
 {
-	stack->stack_a = NULL;
 	free(stack->stack_a);
-	stack->stack_b = NULL;
 	free(stack->stack_b);
-	stack->stack_a_temp = NULL;
 	free(stack->stack_a_temp);
-	stack->temp_board = NULL;
 	free(stack->temp_board);
+	free(stack);
 }
