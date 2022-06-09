@@ -6,12 +6,11 @@
 #    By: qbonvin <qbonvin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/25 15:27:16 by qbonvin           #+#    #+#              #
-#    Updated: 2022/06/09 14:04:22 by qbonvin          ###   ########.fr        #
+#    Updated: 2022/06/09 14:19:16 by qbonvin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = push_swap.a
-PROG = push_swap
+NAME = push_swap
 CFLAGS = -Wall -Werror -Wextra
 CC = gcc -g 
 OBJ = ${SRCS:.c=.o}
@@ -24,7 +23,7 @@ all : ${NAME}
 
 ${NAME} : ${OBJ}
 	@make -C ${LIBFT}
-	${CC} ${CFLAGS} -o ${PROG} ${OBJ} ${LIBFT_A}
+	${CC} ${CFLAGS} -o ${NAME} ${OBJ} ${LIBFT_A}
 
 clean :
 	rm -rf ${OBJ}
@@ -33,6 +32,5 @@ clean :
 
 fclean : clean
 	rm -rf ${NAME}
-	rm -rf ${PROG}
 
 re : fclean all

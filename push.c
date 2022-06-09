@@ -6,7 +6,7 @@
 /*   By: qbonvin <qbonvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 16:12:10 by qbonvin           #+#    #+#             */
-/*   Updated: 2022/06/09 11:51:18 by qbonvin          ###   ########.fr       */
+/*   Updated: 2022/06/09 14:45:35 by qbonvin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 void	pa(t_stack *stack)
 {
-	int	slot;
+	int	i;
 
-	slot = stack->size_a + 1;
+	i = stack->size_a + 1;
 	if (stack->size_b == 0)
 		return ;
 	if (stack->size_a == 0)
 		stack->stack_a[0] = stack->stack_b[0];
 	if (stack->size_a > 0)
 	{
-		while (--slot > 0)
-			stack->stack_a[slot] = stack->stack_a[slot - 1];
+		while (--i > 0)
+			stack->stack_a[i] = stack->stack_a[i - 1];
 		stack->stack_a[0] = stack->stack_b[0];
 	}
-	slot = -1;
-	while (++slot < stack->size_b)
-		stack->stack_b[slot] = stack->stack_b[slot + 1];
+	i = -1;
+	while (++i < stack->size_b)
+		stack->stack_b[i] = stack->stack_b[i + 1];
 	stack->size_a++;
 	stack->size_b--;
 	ft_printf("pa\n");
@@ -37,22 +37,22 @@ void	pa(t_stack *stack)
 
 void	pb(t_stack *stack)
 {
-	int	slot;
+	int	i;
 
-	slot = stack->size_b + 1;
+	i = stack->size_b + 1;
 	if (stack->size_a == 0)
 		return ;
 	if (stack->size_b == 0)
 		stack->stack_b[0] = stack->stack_a[0];
 	if (stack->size_b > 0)
 	{
-		while (--slot > 0)
-			stack->stack_b[slot] = stack->stack_b[slot - 1];
+		while (--i > 0)
+			stack->stack_b[i] = stack->stack_b[i - 1];
 		stack->stack_b[0] = stack->stack_a[0];
 	}
-	slot = -1;
-	while (++slot < stack->size_a)
-		stack->stack_a[slot] = stack->stack_a[slot + 1];
+	i = -1;
+	while (++i < stack->size_a)
+		stack->stack_a[i] = stack->stack_a[i + 1];
 	stack->size_a--;
 	stack->size_b++;
 	ft_printf("pb\n");
